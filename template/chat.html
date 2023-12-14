@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../static/css/chat.css"> -->
+    <link rel="stylesheet" href='{% static "css/chat.css" %}'>
+</head>
+
+<body>
+    
+    
+    <div class="row">
+        <div id="chat">
+
+           
+        </div>
+    </div>
+    <div class="row">
+       
+        <label for="name"></label>
+        <input id="name" name="name" type="text">
+        <button id="button" onclick=sendMessage()>Enviar</button>
+        <h1 id="last_text">texto</h1>
+    </div>
+        
+    
+
+    {{pk|json_script:"pk"}}
+    <script type='text/javascript' src='{% static  "js/chat.js" %}'></script>  
+    <!-- <script type='text/javascript' src="../static/js/chat.js"></script> -->
+</body>
+</html>
